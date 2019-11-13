@@ -1,0 +1,17 @@
+*/.idea/
+.idea/
+*.iml
+target
+*/target/
+
+.settings/
+bin/
+Thumbs.db
+build/
+data/
+*/build/
+*/data/
+.Ds_Store
+
+*.log
+app_data

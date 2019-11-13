@@ -1,0 +1,16 @@
+server:
+  port: 8887
+logging:
+  level:
+    web: DEBUG
+spring:
+  thymeleaf:
+    mode: HTML
+    encoding: UTF-8
+    cache: false
+    prefix: classpath:/templates/
+    suffix: .html
+
+queue-filter:
+  enabled: true
+
