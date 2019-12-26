@@ -14,6 +14,8 @@
         <module>login-demo</module>
         <module>mini-http-test</module>
         <module>my-mybatis</module>
+        <module>db-spring-boot-starter</module>
+        <module>Algorithm</module>
     </modules>
 
     <properties>
@@ -21,6 +23,8 @@
         <lombok.version>1.16.20</lombok.version>
         <fastjson.version>1.2.58</fastjson.version>
         <slf4j.version>1.7.25</slf4j.version>
+        <spring-boot.version>2.1.3.RELEASE</spring-boot.version>
+        <spring-cloud-dependencies.version>Greenwich.SR2</spring-cloud-dependencies.version>
     </properties>
 
     <dependencies>
@@ -73,6 +77,22 @@
                 <groupId>com.zss.mini.http</groupId>
                 <artifactId>mini-http</artifactId>
                 <version>1.0.0</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud-dependencies.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>

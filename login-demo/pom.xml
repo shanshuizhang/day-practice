@@ -24,12 +24,12 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
-        <dependency>
+<!--        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
             <scope>runtime</scope>
             <optional>true</optional>
-        </dependency>
+        </dependency>-->
 
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -40,7 +40,7 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
-            <exclusions>
+           <exclusions>
                 <exclusion>
                     <groupId>org.junit.vintage</groupId>
                     <artifactId>junit-vintage-engine</artifactId>
@@ -62,6 +62,24 @@
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
             <version>3.9</version>
+        </dependency>
+
+<!--        <dependency>
+            <groupId>com.zss</groupId>
+            <artifactId>zss-service-spring-boot-starter</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>-->
+        <!-- https://mvnrepository.com/artifact/joda-time/joda-time -->
+        <dependency>
+            <groupId>joda-time</groupId>
+            <artifactId>joda-time</artifactId>
+            <version>2.10.3</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.zss</groupId>
+            <artifactId>db-spring-boot-starter</artifactId>
+            <version>1.0.0</version>
         </dependency>
     </dependencies>
 

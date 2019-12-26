@@ -4,6 +4,7 @@ import com.zss.login.filter.CompareKickOutFilter;
 import com.zss.login.filter.KickOutFilter;
 import com.zss.login.filter.QueueKickOutFilter;
 import lombok.extern.slf4j.Slf4j;
+import org.mybatis.spring.annotation.MapperScan;
 import org.redisson.Redisson;
 import org.redisson.api.RedissonClient;
 import org.redisson.codec.JsonJacksonCodec;
@@ -17,6 +18,7 @@ import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
 @Slf4j
+@MapperScan({"com.zss.*.mapper"})
 public class LoginDemoApplication {
 
     public static void main(String[] args) {

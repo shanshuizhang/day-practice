@@ -1,5 +1,8 @@
 package com.zss.login.service;
 
+import com.zss.db.annotation.DataSource;
+import com.zss.login.mapper.SysLogMapper;
+import com.zss.login.mapper.po.SysLog;
 import com.zss.login.pojo.UserBO;
 import com.zss.login.utils.JWTUtil;
 import lombok.extern.slf4j.Slf4j;
@@ -9,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.Assert;
 
+import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -23,8 +27,13 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private RedissonClient redissonClient;
 
+    @Autowired
+    private SysLogService sysLogService;
     @Override
     public String buildUserInfo(UserBO userBO) {
+
+        sysLogService.insertSysLog();
+
         userBO.setKickOut(false);
         String token = JWTUtil.sign(userBO.getUsername(),JWTUtil.SECRET);
         Assert.notNull(token,"token cannot null");
@@ -39,4 +48,5 @@ public class UserServiceImpl implements UserService {
        RBucket rBucket = redissonClient.getBucket(jwt);
        rBucket.delete();
     }
+
 }

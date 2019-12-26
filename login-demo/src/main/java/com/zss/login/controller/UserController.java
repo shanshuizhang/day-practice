@@ -20,8 +20,12 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+    //@Autowired
+    //private com.zss.service.UserService userService2;
+
     @PostMapping("login")
     public ApiResult login(@RequestBody UserBO userBO){
+        //userService2.print();
         return new ApiResult(200,"登录成功",userService.buildUserInfo(userBO));
     }
 

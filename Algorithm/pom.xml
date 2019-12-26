@@ -9,16 +9,15 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.zss.mybatis</groupId>
-    <artifactId>my-mybatis</artifactId>
+    <groupId>com.zss</groupId>
+    <artifactId>Algorithm</artifactId>
 
-
-    <dependencies>
-        <dependency>
-            <groupId>org.mybatis</groupId>
-            <artifactId>mybatis</artifactId>
-            <version>3.5.2</version>
-        </dependency>
-    </dependencies>
-
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 </project>
